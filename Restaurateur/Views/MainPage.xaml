@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Restaurateur.ViewModels"
+             x:DataType="vm:MainViewModel"
+             x:Class="Restaurateur.Views.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center"
+            HorizontalOptions="CenterAndExpand">
+
+            <Label 
+                FontSize="Header"
+                Text="{Binding Now, StringFormat='{0:T}'}" />
+
+            <HorizontalStackLayout
+                HorizontalOptions="End"
+                Spacing="24">
+                <Button
+                    Text="Stop"
+                    Command="{Binding StopCommand}" />
+                <Button
+                    Text="Start"
+                    Command="{Binding StartCommand}" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
