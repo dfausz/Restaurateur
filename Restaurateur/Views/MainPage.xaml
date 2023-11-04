@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Restaurateur.ViewModels"
+             xmlns:views="clr-namespace:Restaurateur.Views"
              x:DataType="vm:MainViewModel"
              x:Class="Restaurateur.Views.MainPage">
 
@@ -12,6 +13,14 @@
             VerticalOptions="Center"
             HorizontalOptions="CenterAndExpand">
 
+            <HorizontalStackLayout>
+                <views:Star />
+                <views:Star />
+                <views:Star />
+                <views:Star />
+                <views:Star />
+            </HorizontalStackLayout>
+            
             <Label 
                 FontSize="Header"
                 Text="{Binding Now, StringFormat='{0:T}'}" />
